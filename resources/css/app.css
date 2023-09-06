@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+*{
+    scroll-behavior: smooth;
+}
 
 .bg-abu {
     background: rgba(255, 255, 255, 0.20);

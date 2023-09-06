@@ -16,12 +16,12 @@
 
 <body class="font-pjs relative">
     {{-- FLOAT BUTTON --}}
-    <div class="float-button w-[72px] h-[72px] rounded-full fixed z-[100] bottom-10 right-10 p-3">
+    <a href="http://wa.me/+6287802530264" class="float-button w-[72px] h-[72px] rounded-full fixed z-[100] bottom-10 right-10 p-3">
         <img src="{{ asset('img/wa.png') }}" alt="">
-    </div>
+    </a>
 
     {{-- HOME --}}
-    <section class="w-full bg-auto bg-hitam back py-8 mx-auto">
+    <section id="home" class="w-full bg-auto bg-hitam back py-8 mx-auto">
 
         {{-- navbar --}}
         <div
@@ -30,16 +30,16 @@
                 <img src="{{ asset('img/dri.png') }}" class="w-14 mr-[104px]">
                 <div>
                     <ul class="flex 2xl:gap-20 lg:gap-16">
-                        <a href="/">
+                        <a href="#home">
                             <li class="">home</li>
                         </a>
-                        <a href="/">
+                        <a href="#about">
                             <li class="">Tentang</li>
                         </a>
-                        <a href="/">
+                        <a href="#produk">
                             <li class="">Produk</li>
                         </a>
-                        <a href="/">
+                        <a href="#service">
                             <li class="">Layanan</li>
                         </a>
                     </ul>
@@ -50,7 +50,7 @@
                     <img src="{{ asset('img/id.png') }}" class="w-10 mr-4">
                     <span>ID</span>
                 </div>
-                <button class="rounded-[80px] capitalize border-white border py-[14px] px-[24px]">hubungi kami</button>
+                <a href="http://wa.me/+6287802530264" class="rounded-[80px] capitalize border-white border py-[14px] px-[24px]">hubungi kami</a >
             </div>
         </div>
         {{-- end navbar --}}
@@ -68,11 +68,11 @@
                 </p>
 
             </div>
-            <div
+            <a href="#service"
                 class="rounded-full  border-white border bg-abu py-[16px] px-[24px] flex justify-center items-center gap-4 w-[340px] backdrop-blur-lg">
                 <p class="font-semibold trackinng-[0.12px] leading-[140%] text-[24px]">Selengkapnya</p>
                 <img src="{{ asset('img/more.svg') }}" alt="">
-            </div>
+            </a>
         </div>
 
 
@@ -168,10 +168,10 @@
     {{-- END HOME --}}
 
     {{-- VISI --}}
-    <div class="w-full bg-hitam relative pt-[160px]">
+    <div class="w-full bg-hitam relative pt-[160px] rounded-b-[80px] z-20">
         <div class="flex justify-center items-center pb-[224px] px-[104px] gap-48">
 
-            <div class="flex flex-col items-start gap-4  w-1/2 ">
+            <div class="flex flex-col items-start gap-4  w-1/2 text-white">
                 <p class="text-5xl  leading-[130%] tracking-[0.25px] font-semibold">Visi</p>
                 <p class="text-2xl leading-[140%] tracking-[0.12px]">Visi kami adalah menjadi mitra
                     terpercaya
@@ -180,7 +180,7 @@
                 </p>
             </div>
 
-            <div class="flex flex-col items-start gap-4  z-30 w-1/2 ">
+            <div class="flex flex-col items-start gap-4  z-30 w-1/2 text-white">
                 <p class="text-5xl  leading-[130%] tracking-[0.25px] font-semibold">Misi</p>
                 <ul class="text-2xl leading-[140%] tracking-[0.12px] list-disc">
                     <li>
@@ -200,18 +200,22 @@
 
                 {{-- <p class="">Visi kami adalah menjadi mitra terpercaya dalam pengembangan teknologi informasi, khususnya di bidang industri digital kreatif. Kami berkomitmen untuk menyajikan solusi yang inovatif dan berkualitas tinggi kepada setiap klien kami.</p> --}}
             </div>
+
             {{-- rouded bawah --}}
-            <div class="absolute -bottom-20 z-20 bg-hitam w-full h-[150px] rounded-b-[80px]"></div>
+            {{-- <div class="absolute -bottom-20 z-20 bg-hitam w-full h-[150px] rounded-b-[80px]"></div> --}}
             {{-- blue light --}}
             <div class="absolute bottom-60 right-[840px] bg-blue-900 lamp z-20 w-[150px] h-[191px]"></div>
             {{-- hitam di misi untuk menutupi biru --}}
-            <div class="absolute bottom-32 right-28 border-l-[0.1px] border-[#f1f1f196] bg-[#000013] z-20 w-[846px] h-[374px]"></div>
+            <div
+                class="absolute bottom-32 right-28 border-l-[0.1px] border-[#f1f1f196] bg-[#000013] z-20 w-[846px] h-[374px]">
+            </div>
 
         </div>
     </div>
     {{-- END VISI --}}
 
-    <div class="w-full bg-white px-[100px] relative z-10">
+    {{-- LAYANAN KAMI --}}
+    <div id="service" class="w-full bg-white px-[100px] relative z-[19] -mt-20">
         <p class="text-5xl font-bold tracking-[0.24px] leading-[130%] text-black pt-[176px] pb-20">Layanan Kami</p>
 
         <div class="flex p-10 mb-20 flex-col items-start gap-10 self-stretch rounded-2xl border border-[#C6C6C6]">
@@ -299,13 +303,16 @@
         {{-- rouded bawah --}}
         <div class="absolute -bottom-[150px] bg-white w-full left-0 z-10 h-[150px] rounded-b-[80px]"></div>
     </div>
+    {{-- END LAYANANKAMI --}}
 
-    <div class="w-full bg-hitam relative z-[3] overflow-x-hidden">
-        <p class="text-5xl px-[100px] font-bold tracking-[0.24px] leading-[130%] text-white pt-[176px] pb-20 z-50">
+    {{-- PRODUK KAMI --}}
+    <div id="produk" class="w-full bg-hitam text-white relative z-[18] overflow-hidden rounded-b-[80px]">
+        <p
+            class="text-5xl px-[100px] font-bold tracking-[0.24px] leading-[130%] text-white pt-[176px] pb-20 z-50 w-full">
             Produk Kami
         </p>
 
-        <div class="flex flex-wrap justify-center">
+        <div class="flex flex-wrap justify-center w-full">
             <div class="w-[846px] mx-7 mb-20 flex flex-col gap-10 items-center justify-center">
                 <img src="{{ asset('img/produkgas.png') }}" class="h-[503px] w-full self-stretch ">
                 <div class="flex flex-col gap-6 items-start self-stretch">
@@ -338,16 +345,17 @@
         {{-- lamp top left --}}
         <div class="absolute -top-40 -left-64  bg-blue-900 lamp2 -z-[1] w-[500px] h-[500px]"></div>
         {{-- lamp mid right --}}
-        <div class="absolute bottom-[800px]  -right-24 bp bg-blue-900 lamp2 -z-[1] w-[500px] h-[500px]"></div>
+        <div class="absolute bottom-[800px] -right-80 bp bg-blue-900 lamp2 -z-[1] w-[500px] h-[500px]"></div>
         {{-- lamp bot left --}}
         <div class="absolute bottom-[450px] -left-64  bg-blue-900 lamp2 -z-[1] w-[400px] h-[400px]"></div>
 
         {{-- rounded bottom --}}
-        <div class="absolute -bottom-[87px] bg-black w-full left-0  h-[150px] rounded-b-[80px]"></div>
+        {{-- <div class="absolute -bottom-[87px] bg-red-600 -z-[3] w-full left-0 h-[150px] rounded-b-[80px]"></div> --}}
 
     </div>
+    {{-- PRODUK KAMI --}}
 
-    <div class="w-full bg-white text-black relative z-[2]">
+    <div id="about" class="w-full bg-white text-black relative z-[17] -mt-20">
         <div class="absolute top-[291px] left-[600px] -z-[1]">
             <img src="{{ asset('img/bg_about.png') }}" class="w-[690px] bg-about">
         </div>
@@ -414,41 +422,45 @@
         </div>
     </div>
 
-    <div class="bg-hitam w-full relative  z-[1]">
+    <div class="bg-hitam w-full relative  z-[16]">
         <div class="px-32 pt-[300px]">
             <div
                 class="capitalize flex p-14 items-center gap-12 flex-col rounded-[48px] bg-[#ffffff66] overflow-x-hidden relative">
-                <h1 class="text-[40px] font-semibold tracking-[0.2px] leading-[130%]">Unlock Your Digital Potential
+                <h1 class="text-[40px] font-bold tracking-[0.2px] leading-[130%]">Unlock Your Digital Potential
                 </h1>
                 <h1 class=" tracking-[0.2px] leading-[130%] text-[32px]">Empower your brand with software solutions &
                     digital marketing excellence</h1>
-                <button
-                    class="capitalize px-6 py-4 rounded-full flex items-center justify-center bg-transparent bg-gradient-to-tr from-[#30328C] to-[#3A3ECA] font-semibold tracking-tighter leading-[140%]">get
-                    started now</button>
+                <a href="http://wa.me/+6287802530264"
+                    class="capitalize px-6 py-4 rounded-full flex items-center justify-center bg-transparent bg-gradient-to-tl from-[#30328C] to-[#3A3ECA] text-2xl font-semibold tracking-[0.12px] leading-[140%]">get
+                    started now</a>
                 <img src="{{ asset('img/Group 51.png') }}" class="absolute left-0 top-0">
                 <img src="{{ asset('img/Group 52.png') }}" class="absolute right-0 bottom-0">
 
             </div>
         </div>
 
-        <div class="mt-[84px] px-[104px] py-[56px] flex flex-col items-start gap-12">
+        <div class="mt-[84px] px-[104px] py-[56px] flex flex-col items-start gap-12 text-white">
             <div class="flex justify-between items-center self-stretch">
                 <img src="{{ asset('img/dri.png') }}" class="w-[72px]">
                 <div class="flex justify-end items-center gap-28">
-                    <p class="text-xl font-semibold leading-[140%] tracking-tight">Home</p>
-                    <p class="text-xl font-semibold leading-[140%] tracking-tight">About</p>
-                    <p class="text-xl font-semibold leading-[140%] tracking-tight">Products</p>
-                    <p class="text-xl font-semibold leading-[140%] tracking-tight">Services</p>
+                    <a href="#home" class="text-xl font-semibold leading-[140%] tracking-tight">Home</a>
+                    <a href="#about" class="text-xl font-semibold leading-[140%] tracking-tight">About</a>
+                    <a href="#produk" class="text-xl font-semibold leading-[140%] tracking-tight">Products</a>
+                    <a href="#service" class="text-xl font-semibold leading-[140%] tracking-tight">Services</a>
 
                 </div>
             </div>
 
             <div class="flex items-start gap-12">
-                <img src="{{ asset('img/ig.png') }}" class="w-12">
-                <img src="{{ asset('img/lind.png') }}" class="w-12">
+                <a href="https://www.linkedin.com/company/pt-daya-rekadigital-indonesia">
+                    <img src="{{ asset('img/ig.png') }}" class="w-12">
+                </a>
+                <a href="https://www.instagram.com/rekadigi.id/">
+                    <img src="{{ asset('img/lind.png') }}" class="w-12">
+                </a>
             </div>
 
-            <p class="text-2xl leading-[140%] tracking-tight">Crafting Your Digital Future</p>
+            <p class="text-2xl leading-[140%] tracking-tight font-semibold">Crafting Your Digital Future</p>
             <p class="font-mont text-xl leading-none">© 2023 PT Daya Rekadigital Indonesia All rights reserved.</p>
         </div>
 
