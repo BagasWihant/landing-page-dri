@@ -15,7 +15,7 @@
 </head>
 
 <body class="font-pjs relative">
-    <div class="float-button w-[72px] h-[72px] rounded-full fixed z-[100] bottom-5 right-10 p-3">
+    <div class="float-button w-[72px] h-[72px] rounded-full fixed z-[100] bottom-10 right-10 p-3">
         <img src="{{ asset('img/wa.png') }}" alt="">
     </div>
     {{-- HOME --}}
