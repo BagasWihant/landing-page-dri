@@ -15,11 +15,13 @@
 </head>
 
 <body class="font-pjs relative">
+    {{-- FLOAT BUTTON --}}
     <div class="float-button w-[72px] h-[72px] rounded-full fixed z-[100] bottom-10 right-10 p-3">
         <img src="{{ asset('img/wa.png') }}" alt="">
     </div>
+
     {{-- HOME --}}
-    <section class="w-full bg-auto bg-black back py-8 mx-auto">
+    <section class="w-full bg-auto bg-hitam back py-8 mx-auto">
 
         {{-- navbar --}}
         <div
@@ -163,19 +165,23 @@
         </div>
 
     </section>
+    {{-- END HOME --}}
 
-    <div class="w-full bg-black relative pt-[334px]">
-        <div class="flex justify-center items-center pb-[224px]">
-            <div class="flex flex-col items-start gap-4 pr-20 ">
-                <p class="text-5xl">Visi</p>
-                <p class="text-2xl leading-[140%] tracking-[0.12px] w-[768px]">Visi kami adalah menjadi mitra
+    {{-- VISI --}}
+    <div class="w-full bg-hitam relative pt-[160px]">
+        <div class="flex justify-center items-center pb-[224px] px-[104px] gap-48">
+
+            <div class="flex flex-col items-start gap-4  w-1/2 ">
+                <p class="text-5xl  leading-[130%] tracking-[0.25px] font-semibold">Visi</p>
+                <p class="text-2xl leading-[140%] tracking-[0.12px]">Visi kami adalah menjadi mitra
                     terpercaya
                     dalam pengembangan teknologi informasi, khususnya di bidang industri digital kreatif. Kami
                     berkomitmen untuk menyajikan solusi yang inovatif dan berkualitas tinggi kepada setiap klien kami.
                 </p>
             </div>
-            <div class="flex flex-col items-start gap-4 z-30 ">
-                <p class="text-5xl">Misi</p>
+
+            <div class="flex flex-col items-start gap-4  z-30 w-1/2 ">
+                <p class="text-5xl  leading-[130%] tracking-[0.25px] font-semibold">Misi</p>
                 <ul class="text-2xl leading-[140%] tracking-[0.12px] list-disc">
                     <li>
                         Memberikan solusi teknologi berkualitas tinggi untuk klien
@@ -195,16 +201,15 @@
                 {{-- <p class="">Visi kami adalah menjadi mitra terpercaya dalam pengembangan teknologi informasi, khususnya di bidang industri digital kreatif. Kami berkomitmen untuk menyajikan solusi yang inovatif dan berkualitas tinggi kepada setiap klien kami.</p> --}}
             </div>
             {{-- rouded bawah --}}
-            <div class="absolute -bottom-20 z-20 bg-black w-full h-[150px] rounded-b-[80px]"></div>
+            <div class="absolute -bottom-20 z-20 bg-hitam w-full h-[150px] rounded-b-[80px]"></div>
             {{-- blue light --}}
-            <div class="absolute bottom-60 right-[800px] bg-blue-900 lamp z-20 w-[150px] h-[191px]"></div>
+            <div class="absolute bottom-60 right-[840px] bg-blue-900 lamp z-20 w-[150px] h-[191px]"></div>
             {{-- hitam di misi untuk menutupi biru --}}
-            <div
-                class="absolute bottom-32 right-20 border-l-[0.1px] border-[#f1f1f196] bg-[#000013] z-20 w-[846px] h-[374px]">
-            </div>
+            <div class="absolute bottom-32 right-28 border-l-[0.1px] border-[#f1f1f196] bg-[#000013] z-20 w-[846px] h-[374px]"></div>
 
         </div>
     </div>
+    {{-- END VISI --}}
 
     <div class="w-full bg-white px-[100px] relative z-10">
         <p class="text-5xl font-bold tracking-[0.24px] leading-[130%] text-black pt-[176px] pb-20">Layanan Kami</p>
@@ -295,7 +300,7 @@
         <div class="absolute -bottom-[150px] bg-white w-full left-0 z-10 h-[150px] rounded-b-[80px]"></div>
     </div>
 
-    <div class="w-full bg-black relative z-[3] overflow-x-hidden">
+    <div class="w-full bg-hitam relative z-[3] overflow-x-hidden">
         <p class="text-5xl px-[100px] font-bold tracking-[0.24px] leading-[130%] text-white pt-[176px] pb-20 z-50">
             Produk Kami
         </p>
@@ -409,7 +414,7 @@
         </div>
     </div>
 
-    <div class="bg-black w-full relative  z-[1]">
+    <div class="bg-hitam w-full relative  z-[1]">
         <div class="px-32 pt-[300px]">
             <div
                 class="capitalize flex p-14 items-center gap-12 flex-col rounded-[48px] bg-[#ffffff66] overflow-x-hidden relative">

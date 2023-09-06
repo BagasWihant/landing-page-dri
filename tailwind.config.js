@@ -14,6 +14,9 @@ export default {
             backgroundImage: {
                 'gradient-blue': "url('/img/BG.svg')"
             },
+            colors:{
+                'hitam':'#000013'
+            },
             animation: {
                 marquee: 'marquee 25s linear infinite',
                 marquee2: 'marquee2 25s linear infinite',
