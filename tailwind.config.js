@@ -7,7 +7,8 @@ export default {
     ],
     theme: {
         fontFamily: {
-            'pjs': ['Plus Jakarta Sans'] // Ensure fonts with spaces have " " surrounding it.
+            'pjs': ['Plus Jakarta Sans', 'sans-serif'], // Ensure fonts with spaces have " " surrounding it.
+            'mont': ['Montserrat', 'sans-serif']
         },
         extend: {
             backgroundImage: {

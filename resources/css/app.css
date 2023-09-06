@@ -42,6 +42,16 @@
     background: #000013;
 }
 
+.bg-about{
+    filter: grayscale(97%) hue-rotate(340deg) brightness(4.3);
+}
+
 .bb {
     border: solid blue !important
+}
+.bp {
+    border: solid white !important
+}
+.rr {
+    border: solid red !important
 }
