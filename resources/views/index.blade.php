@@ -15,11 +15,11 @@
 </head>
 
 <body class="font-pjs relative">
-    <div class="float-button w-[72px] h-[72px] rounded-full fixed z-50 bottom-5 right-10 p-3">
+    <div class="float-button w-[72px] h-[72px] rounded-full fixed z-[100] bottom-5 right-10 p-3">
         <img src="{{ asset('img/wa.png') }}" alt="">
     </div>
-
-    <div class="w-full bg-auto bg-black h-screen back py-8 mx-auto">
+    {{-- HOME --}}
+    <section class="w-full bg-auto bg-black back py-8 mx-auto">
 
         {{-- navbar --}}
         <div
@@ -54,7 +54,7 @@
         {{-- end navbar --}}
 
         {{-- SLOGAN --}}
-        <div class="flex flex-col justify-center items-center h-[90%] text-white ">
+        <div class="flex flex-col justify-center items-center h-[90%] pt-[193px] text-white ">
             <div class="font-bold self-center text-center">
                 <h1 class="text-[40px] leading-[130%] tracking-[0.2px] pb-4">
                     Selamat Datang di DRI
@@ -75,10 +75,10 @@
 
 
         {{-- MITRA KAMI --}}
-        <div class="-mt-14">
+        <div class="pt-[128px]">
             <p class="flex justify-start px-[104px] text-xl leading-[140%] font-normal tracking-[0.1px]">Mitra Kami :
             </p>
-            <div class="relative flex overflow-x-hidden gap-0 z-[60]">
+            <div class="relative flex overflow-x-hidden mx-[104px] gap-0 z-[60]">
                 <div class="animate-marquee whitespace-nowrap flex">
                     <div class="text-4xl px-8 ">
                         <img src="{{ asset('img/mitra/pkr.png') }}" class="h-52 w-40 object-contain aspect-[3/2]">
@@ -162,7 +162,7 @@
             </div>
         </div>
 
-    </div>
+    </section>
 
     <div class="w-full bg-black relative pt-[334px]">
         <div class="flex justify-center items-center pb-[224px]">
@@ -295,7 +295,7 @@
         <div class="absolute -bottom-[150px] bg-white w-full left-0 z-10 h-[150px] rounded-b-[80px]"></div>
     </div>
 
-    <div class="w-full bg-black relative z-[3] rr overflow-x-hidden">
+    <div class="w-full bg-black relative z-[3] overflow-x-hidden">
         <p class="text-5xl px-[100px] font-bold tracking-[0.24px] leading-[130%] text-white pt-[176px] pb-20 z-50">
             Produk Kami
         </p>
@@ -402,8 +402,8 @@
             </div>
 
 
-                    {{-- rounded bottom --}}
-        <div class="absolute -bottom-[105px] bg-white w-full left-0  h-[150px] rounded-b-[80px]"></div>
+            {{-- rounded bottom --}}
+            <div class="absolute -bottom-[105px] bg-white w-full left-0  h-[150px] rounded-b-[80px]"></div>
 
 
         </div>
@@ -411,10 +411,15 @@
 
     <div class="bg-black w-full relative  z-[1]">
         <div class="px-32 pt-[300px]">
-            <div class="capitalize flex p-14 items-center gap-12 flex-col rounded-[48px] bg-[#ffffff66] overflow-x-hidden relative">
-                <h1 class="text-[40px] font-semibold tracking-[0.2px] leading-[130%]">Unlock Your Digital Potential</h1>
-                <h1 class=" tracking-[0.2px] leading-[130%] text-[32px]">Empower your brand with software solutions & digital marketing excellence</h1>
-                <button class="capitalize px-6 py-4 rounded-full flex items-center justify-center bg-transparent bg-gradient-to-tr from-[#30328C] to-[#3A3ECA] font-semibold tracking-tighter leading-[140%]">get started now</button>
+            <div
+                class="capitalize flex p-14 items-center gap-12 flex-col rounded-[48px] bg-[#ffffff66] overflow-x-hidden relative">
+                <h1 class="text-[40px] font-semibold tracking-[0.2px] leading-[130%]">Unlock Your Digital Potential
+                </h1>
+                <h1 class=" tracking-[0.2px] leading-[130%] text-[32px]">Empower your brand with software solutions &
+                    digital marketing excellence</h1>
+                <button
+                    class="capitalize px-6 py-4 rounded-full flex items-center justify-center bg-transparent bg-gradient-to-tr from-[#30328C] to-[#3A3ECA] font-semibold tracking-tighter leading-[140%]">get
+                    started now</button>
                 <img src="{{ asset('img/Group 51.png') }}" class="absolute left-0 top-0">
                 <img src="{{ asset('img/Group 52.png') }}" class="absolute right-0 bottom-0">
 
