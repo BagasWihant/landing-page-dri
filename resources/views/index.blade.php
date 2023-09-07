@@ -12,6 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
         rel="stylesheet">
     @vite('resources/css/app.css')
+    <title>{{ __('index.welcome') }}</title>
 </head>
 
 <body class="font-pjs relative">
@@ -25,32 +26,40 @@
 
         {{-- navbar --}}
         <div
-            class="flex justify-between items-center w-full px-[104px] text-white font-semibold leading-[140%] text-xl tracking-wide capitalize">
+            class="flex justify-between items-center w-full 2xl:px-[104px] xl:px-20 lg:px-10 text-white font-semibold leading-[140%] text-xl tracking-wide capitalize">
             <div class="flex justify-between items-center ">
                 <img src="{{ asset('img/dri.png') }}" class="w-14 mr-[104px]">
                 <div>
                     <ul class="flex 2xl:gap-20 lg:gap-16">
                         <a href="#home">
-                            <li class="">home</li>
+                            <li class="">{{ __('index.home') }}</li>
                         </a>
                         <a href="#about">
-                            <li class="">Tentang</li>
+                            <li class="">{{ __('index.about') }}</li>
                         </a>
                         <a href="#produk">
-                            <li class="">Produk</li>
+                            <li class="">{{ __('index.product') }}</li>
                         </a>
                         <a href="#service">
-                            <li class="">Layanan</li>
+                            <li class="">{{ __('index.service') }}</li>
                         </a>
                     </ul>
                 </div>
             </div>
             <div class="flex ">
-                <div id="lang" class="flex items-center 2xl:mr-[80px] lg:mr-[60px]">
-                    <img src="{{ asset('img/id.png') }}" class="w-10 mr-4">
+                @if (app()->getLocale() == 'en')
+
+                <a id="lang" href="/id" class="flex items-center 2xl:mr-[80px] lg:mr-[60px] cursor-pointer">
+                    <img src="{{ asset('img/en.png') }}" class="w-10 mr-4">
+                    <span>EN</span>
+                </a>
+                @else
+                <a id="lang" href="/en" class="flex items-center 2xl:mr-[80px] lg:mr-[60px] cursor-pointer">
+                    <img  src="{{ asset('img/id.png') }}" class="w-10 mr-4">
                     <span>ID</span>
-                </div>
-                <a href="http://wa.me/+6287802530264" class="rounded-[80px] capitalize border-white border py-[14px] px-[24px]">hubungi kami</a >
+                </a>
+                @endif
+                <a href="http://wa.me/+6287802530264" class="rounded-[80px] capitalize border-white border py-[14px] px-[24px]">{{ __('index.contact_us') }}</a >
             </div>
         </div>
         {{-- end navbar --}}
@@ -59,18 +68,15 @@
         <div class="flex flex-col justify-center items-center h-[90%] pt-[193px] text-white ">
             <div class="font-bold self-center text-center">
                 <h1 class="text-[40px] leading-[130%] tracking-[0.2px] pb-4">
-                    Selamat Datang di DRI
+                    {{ __('index.welcome') }}
                 </h1>
-                <h2 class="text-[80px] tracking-[0.4px] leading-[130%] capitalize pb-6">membangun masa depan digital
-                    anda</h2>
-                <p class="text-2xl font-normal leading-[140%] tracking-[0.12px] pb-12">temukan solusi kebutuhan
-                    digitalisasi Anda bersama kami, memberikan kemudahan layanan digital dengan kreatifias tanpa batas
-                </p>
+                <h2 class="text-[80px] tracking-[0.4px] leading-[130%] capitalize pb-6">{{ __('index.text_utama') }}</h2>
+                <p class="text-2xl font-normal leading-[140%] tracking-[0.12px] pb-12">{{ __('index.text_desc') }}</p>
 
             </div>
             <a href="#service"
                 class="rounded-full  border-white border bg-abu py-[16px] px-[24px] flex justify-center items-center gap-4 w-[340px] backdrop-blur-lg">
-                <p class="font-semibold trackinng-[0.12px] leading-[140%] text-[24px]">Selengkapnya</p>
+                <p class="font-semibold trackinng-[0.12px] leading-[140%] text-[24px]">{{ __('index.selengkapnya') }}</p>
                 <img src="{{ asset('img/more.svg') }}" alt="">
             </a>
         </div>
@@ -78,7 +84,7 @@
 
         {{-- MITRA KAMI --}}
         <div class="pt-[128px]">
-            <p class="flex justify-start px-[104px] text-xl leading-[140%] font-normal tracking-[0.1px]">Mitra Kami :
+            <p class="flex justify-start px-[104px] text-xl leading-[140%] font-normal tracking-[0.1px]">{{ __('index.mitra') }} :
             </p>
             <div class="relative flex overflow-x-hidden mx-[104px] gap-0 z-[60]">
                 <div class="animate-marquee whitespace-nowrap flex">
@@ -168,33 +174,21 @@
     {{-- END HOME --}}
 
     {{-- VISI --}}
-    <div class="w-full bg-hitam relative pt-[160px] rounded-b-[80px] z-20">
+    <section class="w-full bg-hitam relative pt-[160px] rounded-b-[80px] z-20">
         <div class="flex justify-center items-center pb-[224px] px-[104px] gap-48">
 
             <div class="flex flex-col items-start gap-4  w-1/2 text-white">
-                <p class="text-5xl  leading-[130%] tracking-[0.25px] font-semibold">Visi</p>
-                <p class="text-2xl leading-[140%] tracking-[0.12px]">Visi kami adalah menjadi mitra
-                    terpercaya
-                    dalam pengembangan teknologi informasi, khususnya di bidang industri digital kreatif. Kami
-                    berkomitmen untuk menyajikan solusi yang inovatif dan berkualitas tinggi kepada setiap klien kami.
-                </p>
+                <p class="text-5xl  leading-[130%] tracking-[0.25px] font-semibold">{{ __('index.visi') }}</p>
+                <p class="text-2xl leading-[140%] tracking-[0.12px]">{{ __('index.visi_desc') }}</p>
             </div>
 
             <div class="flex flex-col items-start gap-4  z-30 w-1/2 text-white">
-                <p class="text-5xl  leading-[130%] tracking-[0.25px] font-semibold">Misi</p>
+                <p class="text-5xl  leading-[130%] tracking-[0.25px] font-semibold">{{ __('index.misi') }}</p>
                 <ul class="text-2xl leading-[140%] tracking-[0.12px] list-disc">
-                    <li>
-                        Memberikan solusi teknologi berkualitas tinggi untuk klien
-                    </li>
-                    <li>
-                        Menciptakan produk digital yang unggul dan effisien
-                    </li>
-                    <li>
-                        Membangun kolaborasi sukses dengan klien
-                    </li>
-                    <li>
-                        Memberikan pengalaman digital yang terbaik
-                    </li>
+                    <li>{{ __('index.misi1') }}</li>
+                    <li>{{ __('index.misi2') }}</li>
+                    <li>{{ __('index.misi3') }}</li>
+                    <li>{{ __('index.misi4') }}</li>
                 </ul>
 
 
@@ -211,23 +205,19 @@
             </div>
 
         </div>
-    </div>
+    </section>
     {{-- END VISI --}}
 
     {{-- LAYANAN KAMI --}}
-    <div id="service" class="w-full bg-white px-[100px] relative z-[19] -mt-20">
-        <p class="text-5xl font-bold tracking-[0.24px] leading-[130%] text-black pt-[176px] pb-20">Layanan Kami</p>
+    <section id="service" class="w-full bg-white px-[100px] relative z-[19] -mt-20">
+        <p class="text-5xl font-bold tracking-[0.24px] leading-[130%] text-black pt-[176px] pb-20">{{ __('index.layanan') }}</p>
 
         <div class="flex p-10 mb-20 flex-col items-start gap-10 self-stretch rounded-2xl border border-[#C6C6C6]">
             <div class="flex items-start gap-10">
                 <img src="{{ asset('img/soft.png') }}" class="w-[200px] h-[200px]">
                 <div class="flex flex-col items-start gap-8  text-black">
-                    <p class="text-4xl font-semibold leading-[130%] tracking-[0.2px] ">Layanan Pengembangan Software
-                    </p>
-                    <p class="text-justify text-2xl tracking-[0.12px] leading-[140%] self-stretch">Membantu
-                        mengoptimalkan transformasi digital bagi bisnis Anda dengan solusi digital terdepan. Tim
-                        pengembang berpengalaman kami menggunakan teknologi terkini dan praktik industri terbaik untuk
-                        merancang dan membangun perangkat lunak sesuai kebutuhan Anda.</p>
+                    <p class="text-4xl font-semibold leading-[130%] tracking-[0.2px] ">{{ __('index.softwareTitle') }}</p>
+                    <p class="text-justify text-2xl tracking-[0.12px] leading-[140%] self-stretch">{{ __('index.softwareDesc') }}</p>
                 </div>
             </div>
             <div class="flex px-[23px] content-center self-stretch gap-x-8 gap-y-10 flex-wrap items-center">
@@ -250,12 +240,8 @@
             <div class="flex items-start gap-10">
                 <img src="{{ asset('img/market.png') }}" class="w-[200px] h-[200px]">
                 <div class="flex flex-col items-start gap-8 text-black ">
-                    <p class="text-4xl font-semibold leading-[130%] tracking-[0.2px] ">Layanan Digital Marketing
-                    </p>
-                    <p class="text-justify text-2xl tracking-[0.12px] leading-[140%] self-stretch">Optimalkan pemasaran
-                        digital pada bisnis Anda dengan layanan Digital Marketing kami. Dengan berfokus pada perancangan
-                        strategi berbasis data, tingkatkan visibilitas produk Anda di ranah digital. Dapatkan layananan
-                        manajemen social media, branding, hingga content marketing.</p>
+                    <p class="text-4xl font-semibold leading-[130%] tracking-[0.2px] ">{{ __('index.digitalTitle') }}</p>
+                    <p class="text-justify text-2xl tracking-[0.12px] leading-[140%] self-stretch">{{ __('index.digitalDesc') }}</p>
                 </div>
             </div>
             <div class="flex px-[23px] content-center self-stretch gap-x-8 gap-y-10 flex-wrap items-center">
@@ -276,11 +262,8 @@
             <div class="flex items-start gap-10">
                 <img src="{{ asset('img/it.png') }}" class="w-[200px] h-[200px]">
                 <div class="flex flex-col items-start gap-8 text-black">
-                    <p class="text-4xl font-semibold leading-[130%] tracking-[0.2px] ">Layanan Perlengkapan IT
-                    </p>
-                    <p class="text-justify text-2xl tracking-[0.12px] leading-[140%] self-stretch">Selain menyediakan
-                        layanan pembangunan perangkat lunak, kami menyediakan layanan pembangunan perlengkapan IT dengan
-                        teknologi IoT untuk kebutuhan bisnis berbagai skala.</p>
+                    <p class="text-4xl font-semibold leading-[130%] tracking-[0.2px] ">{{ __('index.perlengkapanTitle') }}</p>
+                    <p class="text-justify text-2xl tracking-[0.12px] leading-[140%] self-stretch">{{ __('index.perlengkapanDesc') }}</p>
                 </div>
             </div>
             <div class="flex px-[23px] content-center self-stretch gap-x-8 gap-y-10 flex-wrap items-center z-20">
@@ -302,15 +285,13 @@
         </div>
         {{-- rouded bawah --}}
         <div class="absolute -bottom-[150px] bg-white w-full left-0 z-10 h-[150px] rounded-b-[80px]"></div>
-    </div>
+    </section>
     {{-- END LAYANANKAMI --}}
 
     {{-- PRODUK KAMI --}}
-    <div id="produk" class="w-full bg-hitam text-white relative z-[18] overflow-hidden rounded-b-[80px]">
+    <section id="produk" class="w-full bg-hitam text-white relative z-[18] overflow-hidden rounded-b-[80px]">
         <p
-            class="text-5xl px-[100px] font-bold tracking-[0.24px] leading-[130%] text-white pt-[176px] pb-20 z-50 w-full">
-            Produk Kami
-        </p>
+            class="text-5xl px-[100px] font-bold tracking-[0.24px] leading-[130%] text-white pt-[176px] pb-20 z-50 w-full">{{ __('index.produk') }}</p>
 
         <div class="flex flex-wrap justify-center w-full">
             <div class="w-[846px] mx-7 mb-20 flex flex-col gap-10 items-center justify-center">
@@ -352,9 +333,10 @@
         {{-- rounded bottom --}}
         {{-- <div class="absolute -bottom-[87px] bg-red-600 -z-[3] w-full left-0 h-[150px] rounded-b-[80px]"></div> --}}
 
-    </div>
+    </section>
     {{-- PRODUK KAMI --}}
 
+    {{-- ABOUT --}}
     <div id="about" class="w-full bg-white text-black relative z-[17] -mt-20">
         <div class="absolute top-[291px] left-[600px] -z-[1]">
             <img src="{{ asset('img/bg_about.png') }}" class="w-[690px] bg-about">
@@ -363,54 +345,36 @@
         <div class="pt-[405px] flex flex-col justify-center px-[245px] z-10">
             <p
                 class="text-center text-[37.8px] pb-[166px] font-semibold tracking-[0.19px] leading-[130%] text-transparent bg-gradient-to-bl bg-clip-text from-[#30328C] to-[#3a3eca]">
-                PT Daya Rekadital Indonesia merupakan perusahaan penyedia jasa dan konsultan layanan IT yang dapat
-                membantu Anda dalam membangun citra digital yang kuat melalui desain website dan aplikasi yang sesuai
-                dengan kebutuhan perusahaan, didukung dengan layanan jasa konsultasi digital marketing yang unggul.</p>
-            <p class="text-[32px] font-bold leading-[130%] tracking-[0.16px] text-center pb-12">Tanya Kami</p>
+                {{ __('index.aboutText') }}</p>
+            <p class="text-[32px] font-bold leading-[130%] tracking-[0.16px] text-center pb-12">{{ __('index.question') }}</p>
 
             {{-- question --}}
             <div class="flex flex-col gap-8 pb-40">
 
                 <div class="flex p-8 flex-col items-start self-stretch bg-[#fafafa] rounded-3xl">
-                    <h1 class="text-black font-mont font-bold text-2xl leading-none pb-6">Daya Rekadigital Indonesia
-                        bergerak dibidang apa?</h1>
-                    <p class="font-mont text-[#727272] text-xl font-medium leading-none">DRI adalah perusahaan agensi
-                        yang bergerak dibidang Digital Marketing dan Software Development</p>
+                    <h1 class="text-black font-mont font-bold text-2xl leading-none pb-6">{{ __('index.q1Title') }}</h1>
+                    <p class="font-mont text-[#727272] text-xl font-medium leading-none">{{ __('index.q1Desc') }}</p>
                 </div>
 
                 <div class="flex p-8 flex-col items-start self-stretch bg-[#fafafa] rounded-3xl">
-                    <h1 class="text-black font-mont font-bold text-2xl leading-none pb-6">Apa saya yang dilakukan oleh
-                        Daya Rekadigital Indonesia?</h1>
-                    <p class="font-mont text-[#727272] text-xl font-medium leading-none">Kami melayani jasa pembuatan
-                        Social Media Content, Company Profile Video, Audio Visual Product, One Stop Content, dan Logo
-                    </p>
+                    <h1 class="text-black font-mont font-bold text-2xl leading-none pb-6">{{ __('index.q2Title') }}</h1>
+                    <p class="font-mont text-[#727272] text-xl font-medium leading-none">{{ __('index.q2Desc') }}</p>
                 </div>
                 <div class="flex p-8 flex-col items-start self-stretch bg-[#fafafa] rounded-3xl">
-                    <h1 class="text-black font-mont font-bold text-2xl leading-none pb-6">Bagaimana jika ingin
-                        bertanya-tanya terlebih dahulu?</h1>
-                    <p class="font-mont text-[#727272] text-xl font-medium leading-none">Kami melayani konsultasi
-                        gratis agar dapat menyesuaikan keinginan dan kebutuhan klien. Kami juga mengedepankan kenyamanan
-                        serta tercapainya tujuan bersama dengan klien.</p>
+                    <h1 class="text-black font-mont font-bold text-2xl leading-none pb-6">{{ __('index.q3Title') }}</h1>
+                    <p class="font-mont text-[#727272] text-xl font-medium leading-none">{{ __('index.q3Desc') }}</p>
                 </div>
                 <div class="flex p-8 flex-col items-start self-stretch bg-[#fafafa] rounded-3xl">
-                    <h1 class="text-black font-mont font-bold text-2xl leading-none pb-6">Bagaimana cara menghubungi
-                        perusahaan jika pertanyaan saya tidak terjawab di sini?</h1>
-                    <p class="font-mont text-[#727272] text-xl font-medium leading-none">Silahkan untuk menghubungi
-                        melalui kontak yang tertera di halaman resmi kami. Atau Anda dapat menghubungi kami via email
-                        ke: info@rekadigi.id</p>
+                    <h1 class="text-black font-mont font-bold text-2xl leading-none pb-6">{{ __('index.q4Title') }}</h1>
+                    <p class="font-mont text-[#727272] text-xl font-medium leading-none">{{ __('index.q4Desc') }}</p>
                 </div>
                 <div class="flex p-8 flex-col items-start self-stretch bg-[#fafafa] rounded-3xl">
-                    <h1 class="text-black font-mont font-bold text-2xl leading-none pb-6">Apakah harga yang dicantumkan
-                        dapat berubah?</h1>
-                    <p class="font-mont text-[#727272] text-xl font-medium leading-none">Harga yang kami cantumkan
-                        sudah diperhitungkan dengan sebaik mungkin. Tetapi harga dapat disesuaikan dengan kebutuhan
-                        klien itu sendiri.</p>
+                    <h1 class="text-black font-mont font-bold text-2xl leading-none pb-6">{{ __('index.q5Title') }}</h1>
+                    <p class="font-mont text-[#727272] text-xl font-medium leading-none">{{ __('index.q5Desc') }}</p>
                 </div>
                 <div class="flex p-8 flex-col items-start self-stretch bg-[#fafafa] rounded-3xl">
-                    <h1 class="text-black font-mont font-bold text-2xl leading-none pb-6">Dimana lokasi PT Daya
-                        Rekadigital Indonesia?</h1>
-                    <p class="font-mont text-[#727272] text-xl font-medium leading-none">Alamat kami berada di Jl.
-                        Wijaya Kusuma No.39, Tipes, Kec. Serengan, Kota Surakarta, Jawa Tengah 57154</p>
+                    <h1 class="text-black font-mont font-bold text-2xl leading-none pb-6">{{ __('index.q6Title') }}</h1>
+                    <p class="font-mont text-[#727272] text-xl font-medium leading-none">{{ __('index.q6Desc') }}</p>
                 </div>
             </div>
 
@@ -421,11 +385,12 @@
 
         </div>
     </div>
+    {{-- end about --}}
 
     <div class="bg-hitam w-full relative  z-[16]">
         <div class="px-32 pt-[300px]">
             <div
-                class="capitalize flex p-14 items-center gap-12 flex-col rounded-[48px] bg-[#ffffff66] overflow-x-hidden relative">
+                class="capitalize flex p-14 items-center gap-12 flex-col rounded-[48px] bg-[#ffffff66] text-white overflow-x-hidden relative">
                 <h1 class="text-[40px] font-bold tracking-[0.2px] leading-[130%]">Unlock Your Digital Potential
                 </h1>
                 <h1 class=" tracking-[0.2px] leading-[130%] text-[32px]">Empower your brand with software solutions &
