@@ -349,14 +349,14 @@
     {{-- END VISI --}}
 
     {{-- LAYANAN KAMI --}}
-    <section id="service" class="w-full bg-white px-[100px] relative z-[19] -mt-20">
+    <section id="service" class="w-full bg-white lg:px-[100px] sss:px-4 relative z-[19] -mt-20">
         <p class="text-5xl font-bold tracking-[0.24px] leading-[130%] text-black pt-[176px] pb-20">
             {{ __('index.layanan') }}</p>
 
         <div class="flex p-10 mb-20 flex-col items-start gap-10 self-stretch rounded-2xl border border-[#C6C6C6]">
-            <div class="flex items-start gap-10">
+            <div class="flex sm:items-center sss:flex-col lg:flex-row md:gap-10">
                 <img src="{{ asset('img/soft.png') }}"
-                    class="lg:w-[200px] lg:h-[200px] md:w-[100px] md:h-[100px] sm:h-[70px] sm:w-[70px] sss:w-[50px] sss:h-[50px]">
+                    class="lg:w-[200px] lg:h-[200px] md:w-[100px] md:h-[100px] sm:h-[70px] sm:w-[70px] sss:hidden sm:block">
                 <div class="flex flex-col items-start gap-8  text-black">
                     <p class="text-4xl font-semibold leading-[130%] tracking-[0.2px] ">{{ __('index.softwareTitle') }}
                     </p>
@@ -364,10 +364,11 @@
                         {{ __('index.softwareDesc') }}</p>
                 </div>
             </div>
-            <div class="flex px-[23px] content-center self-stretch gap-x-8 gap-y-10 flex-wrap items-center">
-                <img src="{{ asset('img/mitra/pkr.png') }}" class="h-20">
-                <img src="{{ asset('img/mitra/sanggau.png') }}" class="h-20">
-                <img src="{{ asset('img/mitra/koni_ska.png') }}" class="h-20">
+            {{-- <div class="flex px-[23px] content-center self-stretch gap-x-8 gap-y-10 flex-wrap items-center"> --}}
+            <div class="grid sss:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 3xl:grid-cols-9 grid-flow-row sss:gap-5 items-center justify-center">
+                <img src="{{ asset('img/mitra/pkr.png') }}" class="h-20 bb">
+                <img src="{{ asset('img/mitra/sanggau.png') }}" class="h-20 bb">
+                <img src="{{ asset('img/mitra/koni_ska.png') }}" class="h-20 bb ">
                 <img src="{{ asset('img/mitra/pixel.png') }}" class="h-12">
                 <img src="{{ asset('img/mitra/indexb.png') }}" class="h-12">
                 <img src="{{ asset('img/mitra/selasihb.png') }}" class="h-20">
@@ -381,9 +382,9 @@
         </div>
 
         <div class="flex p-10 mb-20 flex-col items-start gap-10 self-stretch rounded-2xl border border-[#C6C6C6]">
-            <div class="flex items-start gap-10">
+            <div class="flex sm:items-center sss:flex-col lg:flex-row md:gap-10">
                 <img src="{{ asset('img/market.png') }}"
-                    class="lg:w-[200px] lg:h-[200px] md:w-[100px] md:h-[100px] sm:h-[70px] sm:w-[70px] sss:w-[50px] sss:h-[50px]">
+                    class="lg:w-[200px] lg:h-[200px] md:w-[100px] md:h-[100px] sm:h-[70px] sm:w-[70px]  sss:hidden sm:block ">
                 <div class="flex flex-col items-start gap-8 text-black ">
                     <p class="text-4xl font-semibold leading-[130%] tracking-[0.2px] ">{{ __('index.digitalTitle') }}
                     </p>
@@ -391,7 +392,7 @@
                         {{ __('index.digitalDesc') }}</p>
                 </div>
             </div>
-            <div class="flex px-[23px] content-center self-stretch gap-x-8 gap-y-10 flex-wrap items-center">
+            <div class="grid sss:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 3xl:grid-cols-9 grid-flow-row sss:gap-5 items-center justify-center">
                 <img src="{{ asset('img/digital/1gudeg.png') }}" class="h-[90px]">
                 <img src="{{ asset('img/digital/2batik.png') }}" class="h-20">
                 <img src="{{ asset('img/digital/3mon.png') }}" class="h-[90px]">
@@ -406,9 +407,9 @@
 
         <div
             class="flex p-10 mb-20 flex-col items-start gap-10 self-stretch rounded-2xl border border-[#C6C6C6] z-50 ">
-            <div class="flex items-start gap-10">
+            <div class="flex sm:items-center sss:flex-col lg:flex-row md:gap-10">
                 <img src="{{ asset('img/it.png') }}"
-                    class="lg:w-[200px] lg:h-[200px] md:w-[100px] md:h-[100px] sm:h-[70px] sm:w-[70px] sss:w-[50px] sss:h-[50px]">
+                    class="lg:w-[200px] lg:h-[200px] md:w-[100px] md:h-[100px] sm:h-[70px] sm:w-[70px]  sss:hidden sm:block ">
                 <div class="flex flex-col items-start gap-8 text-black">
                     <p class="text-4xl font-semibold leading-[130%] tracking-[0.2px] ">
                         {{ __('index.perlengkapanTitle') }}</p>
@@ -416,7 +417,8 @@
                         {{ __('index.perlengkapanDesc') }}</p>
                 </div>
             </div>
-            <div class="flex px-[23px] content-center self-stretch gap-x-8 gap-y-10 flex-wrap items-center z-20">
+            {{-- <div class="flex px-[23px] content-center self-stretch gap-x-8 gap-y-10 flex-wrap items-center z-20"> --}}
+            <div class="grid sss:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 3xl:grid-cols-9 grid-flow-row sss:gap-5 items-center justify-center">
                 <img src="{{ asset('img/mitra/pkr.png') }}" class="h-20">
                 <img src="{{ asset('img/mitra/sanggau.png') }}" class="h-20">
                 <img src="{{ asset('img/mitra/koni_ska.png') }}" class="h-20">
