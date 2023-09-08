@@ -14,6 +14,10 @@
     background-image: url('../../public/img/BG.svg');
     background-repeat: no-repeat;
 }
+.backx256 {
+    background-image: url('../../public/img/bgx2560.svg');
+    background-repeat: no-repeat;
+}
 
 .img-pkr {
     background-image: url('../../public/img/mitra/pkr.png');
@@ -56,4 +60,7 @@
 }
 .rr {
     border: solid red !important
+}
+.cc{
+    border: solid chartreuse !important
 }
