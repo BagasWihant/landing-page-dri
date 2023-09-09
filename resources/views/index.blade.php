@@ -365,7 +365,8 @@
                 </div>
             </div>
             {{-- <div class="flex px-[23px] content-center self-stretch gap-x-8 gap-y-10 flex-wrap items-center"> --}}
-            <div class="grid sss:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 3xl:grid-cols-9 grid-flow-row sss:gap-5 items-center justify-center">
+            <div
+                class="grid sss:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 3xl:grid-cols-9 grid-flow-row sss:gap-5 items-center justify-center">
                 <img src="{{ asset('img/mitra/pkr.png') }}" class="h-20 ">
                 <img src="{{ asset('img/mitra/sanggau.png') }}" class="h-20 ">
                 <img src="{{ asset('img/mitra/koni_ska.png') }}" class="h-20  ">
@@ -392,7 +393,8 @@
                         {{ __('index.digitalDesc') }}</p>
                 </div>
             </div>
-            <div class="grid sss:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 3xl:grid-cols-9 grid-flow-row sss:gap-5 items-center justify-center">
+            <div
+                class="grid sss:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 3xl:grid-cols-9 grid-flow-row sss:gap-5 items-center justify-center">
                 <img src="{{ asset('img/digital/1gudeg.png') }}" class="h-[90px]">
                 <img src="{{ asset('img/digital/2batik.png') }}" class="h-20">
                 <img src="{{ asset('img/digital/3mon.png') }}" class="h-[90px]">
@@ -418,7 +420,8 @@
                 </div>
             </div>
             {{-- <div class="flex px-[23px] content-center self-stretch gap-x-8 gap-y-10 flex-wrap items-center z-20"> --}}
-            <div class="grid sss:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 3xl:grid-cols-9 grid-flow-row sss:gap-5 items-center justify-center">
+            <div
+                class="grid sss:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 3xl:grid-cols-9 grid-flow-row sss:gap-5 items-center justify-center">
                 <img src="{{ asset('img/mitra/pkr.png') }}" class="h-20">
                 <img src="{{ asset('img/mitra/sanggau.png') }}" class="h-20">
                 <img src="{{ asset('img/mitra/koni_ska.png') }}" class="h-20">
@@ -448,29 +451,43 @@
 
         <div class="flex flex-wrap justify-center w-full">
             <div class="w-[846px] md:mx-7 sss:mx-5 mb-20 flex flex-col gap-10 items-center justify-center ">
-                <img src="{{ asset('img/produkgas.png') }}" class="lg:h-[503px] md:h-[373px] sm:h-[270px] sss:h-[213px] aspect-video ">
+                <img src="{{ asset('img/produkgas.png') }}"
+                    class="lg:h-[503px] md:h-[373px] sm:h-[270px] sss:h-[213px] aspect-video ">
                 <div class="flex flex-col gap-6 items-start self-stretch">
-                    <p class="text-center self-stretch sss:text-3xl sm:text-[40px] font-semibold sm:leading-[130%] tracking-[0.2px]">GAS
+                    <p
+                        class="text-center self-stretch sss:text-3xl sm:text-[40px] font-semibold sm:leading-[130%] tracking-[0.2px]">
+                        GAS
                         Apps</p>
-                    <p class="text-center self-stretch sm:text-[32px] sm:leading-[130%] sss:text-2xl tracking-[0.16px]">Mobile Marketplace
+                    <p
+                        class="text-center self-stretch sm:text-[32px] sm:leading-[130%] sss:text-2xl tracking-[0.16px]">
+                        Mobile Marketplace
                         & Point of Sales</p>
                 </div>
             </div>
             <div class="w-[846px] mx-7 mb-20 flex flex-col gap-10 items-center justify-center">
-                <img src="{{ asset('img/produkbaba.png') }}" class="lg:h-[503px] md:h-[373px] sm:h-[270px] sss:h-[213px] aspect-video ">
+                <img src="{{ asset('img/produkbaba.png') }}"
+                    class="lg:h-[503px] md:h-[373px] sm:h-[270px] sss:h-[213px] aspect-video ">
                 <div class="flex flex-col gap-6 items-start self-stretch">
-                    <p class="text-center self-stretch sss:text-3xl sm:text-[40px] font-semibold sm:leading-[130%] tracking-[0.2px]">BABA
+                    <p
+                        class="text-center self-stretch sss:text-3xl sm:text-[40px] font-semibold sm:leading-[130%] tracking-[0.2px]">
+                        BABA
                     </p>
-                    <p class="text-center self-stretch sm:text-[32px] sm:leading-[130%] sss:text-2xl tracking-[0.16px]">Management System
+                    <p
+                        class="text-center self-stretch sm:text-[32px] sm:leading-[130%] sss:text-2xl tracking-[0.16px]">
+                        Management System
                     </p>
                 </div>
             </div>
             <div class="w-[846px] mx-7 mb-20 flex flex-col gap-10 items-center justify-center">
-                <img src="{{ asset('img/produkblanko.png') }}" class="lg:h-[503px] md:h-[373px] sm:h-[270px] sss:h-[213px] aspect-video">
+                <img src="{{ asset('img/produkblanko.png') }}"
+                    class="lg:h-[503px] md:h-[373px] sm:h-[270px] sss:h-[213px] aspect-video">
                 <div class="flex flex-col gap-6 items-start self-stretch">
-                    <p class="text-center self-stretch sss:text-3xl sm:text-[40px] font-semibold sm:leading-[130%] tracking-[0.2px]">
+                    <p
+                        class="text-center self-stretch sss:text-3xl sm:text-[40px] font-semibold sm:leading-[130%] tracking-[0.2px]">
                         Blangko.id</p>
-                    <p class="text-center self-stretch sm:text-[32px] sm:leading-[130%] sss:text-2xl tracking-[0.16px]">Online Form
+                    <p
+                        class="text-center self-stretch sm:text-[32px] sm:leading-[130%] sss:text-2xl tracking-[0.16px]">
+                        Online Form
                         Builder</p>
                 </div>
             </div>
@@ -490,51 +507,54 @@
     {{-- PRODUK KAMI --}}
 
     {{-- ABOUT --}}
-    <div id="about" class="w-full bg-white text-black relative z-[17] -mt-20">
-        <div class="absolute top-[291px] left-[600px] -z-[1]">
-            <img src="{{ asset('img/bg_about.png') }}" class="w-[690px] bg-about">
-        </div>
+    <div id="about" class="w-full bg-white text-black z-[17] relative -mt-20">
 
-        <div class="pt-[405px] flex flex-col justify-center px-[245px] z-10">
-            <p
-                class="text-center text-[37.8px] pb-[166px] font-semibold tracking-[0.19px] leading-[130%] text-transparent bg-gradient-to-bl bg-clip-text from-[#30328C] to-[#3a3eca]">
-                {{ __('index.aboutText') }}</p>
-            <p class="text-[32px] font-bold leading-[130%] tracking-[0.16px] text-center pb-12">
+        <div class="xl:pt-[405px] pt-40 flex flex-col justify-center px-6 sm:px-10 md:px-24 2xl:px-[245px]">
+            <div class="flex justify-center w-full relative z-10">
+                <div class="absolute top-20 sm:-top-10 xl:-top-40 -z-[1]">
+                    <img src="{{ asset('img/bg_about.png') }}" class="w-[690px] bg-about">
+                </div>
+                <p
+                class="text-center text-2xl sm:text-3xl md:text-[37.8px] pb-[166px] font-semibold tracking-[0.19px] md:leading-[130%] text-transparent bg-gradient-to-bl bg-clip-text from-[#30328C] to-[#3a3eca]"
+
+                >{{ __('index.aboutText') }}</p>
+            </div>
+            <p class="text-[32px] font-bold leading-[130%] tracking-[0.16px] text-center pb-12 z-10">
                 {{ __('index.question') }}</p>
 
             {{-- question --}}
-            <div class="flex flex-col gap-8 pb-40">
+            <div class="flex flex-col gap-8 pb-40 z-10">
 
                 <div class="flex p-8 flex-col items-start self-stretch bg-[#fafafa] rounded-3xl">
-                    <h1 class="text-black font-mont font-bold text-2xl leading-none pb-6">{{ __('index.q1Title') }}
+                    <h1 class="text-black font-mont font-bold sm:text-2xl text-xl leading-none pb-6">{{ __('index.q1Title') }}
                     </h1>
-                    <p class="font-mont text-[#727272] text-xl font-medium leading-none">{{ __('index.q1Desc') }}</p>
+                    <p class="font-mont text-[#727272] sm:text-xl text-lg font-medium leading-none">{{ __('index.q1Desc') }}</p>
                 </div>
 
                 <div class="flex p-8 flex-col items-start self-stretch bg-[#fafafa] rounded-3xl">
-                    <h1 class="text-black font-mont font-bold text-2xl leading-none pb-6">{{ __('index.q2Title') }}
+                    <h1 class="text-black font-mont font-bold sm:text-2xl text-xl leading-none pb-6">{{ __('index.q2Title') }}
                     </h1>
-                    <p class="font-mont text-[#727272] text-xl font-medium leading-none">{{ __('index.q2Desc') }}</p>
+                    <p class="font-mont text-[#727272] sm:text-xl text-lg font-medium leading-none">{{ __('index.q2Desc') }}</p>
                 </div>
                 <div class="flex p-8 flex-col items-start self-stretch bg-[#fafafa] rounded-3xl">
-                    <h1 class="text-black font-mont font-bold text-2xl leading-none pb-6">{{ __('index.q3Title') }}
+                    <h1 class="text-black font-mont font-bold sm:text-2xl text-xl leading-none pb-6">{{ __('index.q3Title') }}
                     </h1>
-                    <p class="font-mont text-[#727272] text-xl font-medium leading-none">{{ __('index.q3Desc') }}</p>
+                    <p class="font-mont text-[#727272] sm:text-xl text-lg font-medium leading-none">{{ __('index.q3Desc') }}</p>
                 </div>
                 <div class="flex p-8 flex-col items-start self-stretch bg-[#fafafa] rounded-3xl">
-                    <h1 class="text-black font-mont font-bold text-2xl leading-none pb-6">{{ __('index.q4Title') }}
+                    <h1 class="text-black font-mont font-bold sm:text-2xl text-xl leading-none pb-6">{{ __('index.q4Title') }}
                     </h1>
-                    <p class="font-mont text-[#727272] text-xl font-medium leading-none">{{ __('index.q4Desc') }}</p>
+                    <p class="font-mont text-[#727272] sm:text-xl text-lg font-medium leading-none">{{ __('index.q4Desc') }}</p>
                 </div>
                 <div class="flex p-8 flex-col items-start self-stretch bg-[#fafafa] rounded-3xl">
-                    <h1 class="text-black font-mont font-bold text-2xl leading-none pb-6">{{ __('index.q5Title') }}
+                    <h1 class="text-black font-mont font-bold sm:text-2xl text-xl leading-none pb-6">{{ __('index.q5Title') }}
                     </h1>
-                    <p class="font-mont text-[#727272] text-xl font-medium leading-none">{{ __('index.q5Desc') }}</p>
+                    <p class="font-mont text-[#727272] sm:text-xl text-lg font-medium leading-none">{{ __('index.q5Desc') }}</p>
                 </div>
                 <div class="flex p-8 flex-col items-start self-stretch bg-[#fafafa] rounded-3xl">
-                    <h1 class="text-black font-mont font-bold text-2xl leading-none pb-6">{{ __('index.q6Title') }}
+                    <h1 class="text-black font-mont font-bold sm:text-2xl text-xl leading-none pb-6">{{ __('index.q6Title') }}
                     </h1>
-                    <p class="font-mont text-[#727272] text-xl font-medium leading-none">{{ __('index.q6Desc') }}</p>
+                    <p class="font-mont text-[#727272] sm:text-xl text-lg font-medium leading-none">{{ __('index.q6Desc') }}</p>
                 </div>
             </div>
 
