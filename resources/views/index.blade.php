@@ -338,7 +338,7 @@
 
                 {{-- blue light --}}
                 <div
-                    class="absolute 2xl:bottom-16 xl:bottom-36  xl:-left-10 sss:top-0 sss:left-20 lamp bg-blue-900 bb z-[9] w-[150px] h-[181px]">
+                    class="absolute 2xl:bottom-16 xl:bottom-36  xl:-left-10 sss:top-0 sss:left-20 lamp bg-blue-900  z-[9] w-[150px] h-[181px]">
                 </div>
                 {{-- hitam di misi untuk menutupi biru --}}
                 {{-- <div class="absolute bottom-32 right-0 bb border-l-[0.1px] border-[#f1f1f196] bg-[#000013] z-20 w-[846px] h-[374px]"> --}}
@@ -366,9 +366,9 @@
             </div>
             {{-- <div class="flex px-[23px] content-center self-stretch gap-x-8 gap-y-10 flex-wrap items-center"> --}}
             <div class="grid sss:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 3xl:grid-cols-9 grid-flow-row sss:gap-5 items-center justify-center">
-                <img src="{{ asset('img/mitra/pkr.png') }}" class="h-20 bb">
-                <img src="{{ asset('img/mitra/sanggau.png') }}" class="h-20 bb">
-                <img src="{{ asset('img/mitra/koni_ska.png') }}" class="h-20 bb ">
+                <img src="{{ asset('img/mitra/pkr.png') }}" class="h-20 ">
+                <img src="{{ asset('img/mitra/sanggau.png') }}" class="h-20 ">
+                <img src="{{ asset('img/mitra/koni_ska.png') }}" class="h-20  ">
                 <img src="{{ asset('img/mitra/pixel.png') }}" class="h-12">
                 <img src="{{ asset('img/mitra/indexb.png') }}" class="h-12">
                 <img src="{{ asset('img/mitra/selasihb.png') }}" class="h-20">
@@ -447,30 +447,30 @@
             {{ __('index.produk') }}</p>
 
         <div class="flex flex-wrap justify-center w-full">
-            <div class="w-[846px] mx-7 mb-20 flex flex-col gap-10 items-center justify-center">
-                <img src="{{ asset('img/produkgas.png') }}" class="h-[503px] w-full self-stretch ">
+            <div class="w-[846px] md:mx-7 sss:mx-5 mb-20 flex flex-col gap-10 items-center justify-center ">
+                <img src="{{ asset('img/produkgas.png') }}" class="lg:h-[503px] md:h-[373px] sm:h-[270px] sss:h-[213px] aspect-video ">
                 <div class="flex flex-col gap-6 items-start self-stretch">
-                    <p class="text-center self-stretch text-[40px] font-semibold leading-[130%] tracking-[0.2px]">GAS
+                    <p class="text-center self-stretch sss:text-3xl sm:text-[40px] font-semibold sm:leading-[130%] tracking-[0.2px]">GAS
                         Apps</p>
-                    <p class="text-center self-stretch text-[32px] leading-[130%] tracking-[0.16px]">Mobile Marketplace
+                    <p class="text-center self-stretch sm:text-[32px] sm:leading-[130%] sss:text-2xl tracking-[0.16px]">Mobile Marketplace
                         & Point of Sales</p>
                 </div>
             </div>
             <div class="w-[846px] mx-7 mb-20 flex flex-col gap-10 items-center justify-center">
-                <img src="{{ asset('img/produkbaba.png') }}" class="h-[503px] w-full self-stretch ">
+                <img src="{{ asset('img/produkbaba.png') }}" class="lg:h-[503px] md:h-[373px] sm:h-[270px] sss:h-[213px] aspect-video ">
                 <div class="flex flex-col gap-6 items-start self-stretch">
-                    <p class="text-center self-stretch text-[40px] font-semibold leading-[130%] tracking-[0.2px]">BABA
+                    <p class="text-center self-stretch sss:text-3xl sm:text-[40px] font-semibold sm:leading-[130%] tracking-[0.2px]">BABA
                     </p>
-                    <p class="text-center self-stretch text-[32px] leading-[130%] tracking-[0.16px]">Management System
+                    <p class="text-center self-stretch sm:text-[32px] sm:leading-[130%] sss:text-2xl tracking-[0.16px]">Management System
                     </p>
                 </div>
             </div>
             <div class="w-[846px] mx-7 mb-20 flex flex-col gap-10 items-center justify-center">
-                <img src="{{ asset('img/produkblanko.png') }}" class="h-[503px] w-full self-stretch m-4">
+                <img src="{{ asset('img/produkblanko.png') }}" class="lg:h-[503px] md:h-[373px] sm:h-[270px] sss:h-[213px] aspect-video">
                 <div class="flex flex-col gap-6 items-start self-stretch">
-                    <p class="text-center self-stretch text-[40px] font-semibold leading-[130%] tracking-[0.2px]">
+                    <p class="text-center self-stretch sss:text-3xl sm:text-[40px] font-semibold sm:leading-[130%] tracking-[0.2px]">
                         Blangko.id</p>
-                    <p class="text-center self-stretch text-[32px] leading-[130%] tracking-[0.16px]">Online Form
+                    <p class="text-center self-stretch sm:text-[32px] sm:leading-[130%] sss:text-2xl tracking-[0.16px]">Online Form
                         Builder</p>
                 </div>
             </div>
