@@ -23,7 +23,7 @@
     </a>
 
     {{-- HOME --}}
-    <section id="home" class=" bg-hitam back 3xl:backx256 min-h-screen bg-cover py-8 mx-auto ">
+    <section id="home" class=" bg-hitam back 3xl:backx256 h-screen bg-cover py-8 mx-auto">
 
         <div class=" w-full h-full fixed md:hidden block py-0 top-0 left-0 duration-500 z-[99999] -translate-y-full bg-hitam bg-opacity-75"
             id="menuContent">
@@ -78,122 +78,87 @@
                 </ul>
             </div>
         </div>
-        {{-- navbar --}}
-        {{-- <div class="flex justify-between items-center w-full 2xl:px-[104px] xl:px-20 lg:px-10 text-white font-semibold leading-[140%] text-xl tracking-wide capitalize">
-            <div class="flex justify-between items-center ">
-                <img src="{{ asset('img/dri.png') }}" class="w-14 mr-[104px]">
-                <div>
-                    <ul class="flex 2xl:gap-20 lg:gap-16">
-                        <a href="#home">
-                            <li class="">{{ __('index.home') }}</li>
-                        </a>
-                        <a href="#about">
-                            <li class="">{{ __('index.about') }}</li>
-                        </a>
-                        <a href="#produk">
-                            <li class="">{{ __('index.product') }}</li>
-                        </a>
-                        <a href="#service">
-                            <li class="">{{ __('index.service') }}</li>
-                        </a>
-                    </ul>
-                </div>
-            </div>
-            <div class="flex ">
-                @if (app()->getLocale() == 'en')
 
-                <a id="lang" href="/id" class="flex items-center 2xl:mr-[80px] lg:mr-[60px] cursor-pointer">
-                    <img src="{{ asset('img/en.png') }}" class="w-10 mr-4">
-                    <span>EN</span>
-                </a>
-                @else
-                <a id="lang" href="/en" class="flex items-center 2xl:mr-[80px] lg:mr-[60px] cursor-pointer">
-                    <img  src="{{ asset('img/id.png') }}" class="w-10 mr-4">
-                    <span>ID</span>
-                </a>
-                @endif
-                <a href="http://wa.me/+6287802530264" class="rounded-[80px] capitalize border-white border py-[14px] px-[24px]">{{ __('index.contact_us') }}</a >
-            </div>
-        </div> --}}
+        <div class="flex flex-col justify-between h-full">
+            <div class="w-full text-white flex flex-wrap 2xl:px-[104px] xl:px-20 lg:px-10 md:px-5 sss:px-4 ">
+                <div href="" class="flex items-center w-full justify-between relative">
+                    <img src="{{ asset('img/dri.png') }}" class="w-14 lg:mr-[104px] md:mr-20" alt="DRI" />
 
-        <div class="w-full text-white flex flex-wrap 2xl:px-[104px] xl:px-20 lg:px-10 md:px-5 sss:px-4 ">
-            <div href="" class="flex items-center w-full justify-between relative">
-                <img src="{{ asset('img/dri.png') }}" class="w-14 lg:mr-[104px] md:mr-20" alt="DRI" />
-
-                <div class="hidden w-full md:flex md:justify-between md:items-center">
-                    <ul
-                        class="flex 2xl:gap-20 lg:gap-16 md:gap-10 lg:text-xl text-base tracking-[0.12px] leading-[140%] font-semibold">
-                        <a href="#home">
-                            <li class="">{{ __('index.home') }}</li>
-                        </a>
-                        <a href="#about">
-                            <li class="">{{ __('index.about') }}</li>
-                        </a>
-                        <a href="#produk">
-                            <li class="">{{ __('index.product') }}</li>
-                        </a>
-                        <a href="#service">
-                            <li class="">{{ __('index.service') }}</li>
-                        </a>
-                    </ul>
-                    <div class="md:flex hidden">
-                        @if (app()->getLocale() == 'en')
-                            <a id="lang" href="/id"
-                                class="flex items-center 2xl:mr-[80px] xl:mr-[60px] md:mr-5 cursor-pointer">
-                                <img src="{{ asset('img/en.png') }}" class="xl:w-10 xl:mr-4 w-8 mr-3">
-                                <span>EN</span>
+                    <div class="hidden w-full md:flex md:justify-between md:items-center">
+                        <ul
+                            class="flex 2xl:gap-20 lg:gap-16 md:gap-10 lg:text-xl text-base tracking-[0.12px] leading-[140%] font-semibold">
+                            <a href="#home">
+                                <li class="">{{ __('index.home') }}</li>
                             </a>
-                        @else
-                            <a id="lang" href="/en"
-                                class="flex items-center 2xl:mr-[80px] xl:mr-[60px] md:mr-5 cursor-pointer">
-                                <img src="{{ asset('img/id.png') }}" class="xl:w-10 xl:mr-4 w-8 mr-3">
-                                <span>ID</span>
+                            <a href="#about">
+                                <li class="">{{ __('index.about') }}</li>
                             </a>
-                        @endif
-                        <a href="http://wa.me/+6287802530264"
-                            class="rounded-[80px] capitalize border-white border lg:py-[14px] py-3 lg:px-[24px] px-3">{{ __('index.contact_us') }}</a>
+                            <a href="#produk">
+                                <li class="">{{ __('index.product') }}</li>
+                            </a>
+                            <a href="#service">
+                                <li class="">{{ __('index.service') }}</li>
+                            </a>
+                        </ul>
+                        <div class="md:flex hidden">
+                            @if (app()->getLocale() == 'en')
+                                <a id="lang" href="/id"
+                                    class="flex items-center 2xl:mr-[80px] xl:mr-[60px] md:mr-5 cursor-pointer">
+                                    <img src="{{ asset('img/en.png') }}" class="xl:w-10 xl:mr-4 w-8 mr-3">
+                                    <span>EN</span>
+                                </a>
+                            @else
+                                <a id="lang" href="/en"
+                                    class="flex items-center 2xl:mr-[80px] xl:mr-[60px] md:mr-5 cursor-pointer">
+                                    <img src="{{ asset('img/id.png') }}" class="xl:w-10 xl:mr-4 w-8 mr-3">
+                                    <span>ID</span>
+                                </a>
+                            @endif
+                            <a href="http://wa.me/+6287802530264"
+                                class="rounded-[80px] capitalize border-white border lg:py-[14px] py-3 lg:px-[24px] px-3">{{ __('index.contact_us') }}</a>
 
+                        </div>
                     </div>
+
+                    <button data-collapse-toggle="navbar-default" type="button" onclick="openMenu()"
+                        class="inline-flex items-center p-1 w-14 h-14  justify-center text-sm text-white hover:text-[#30328C] rounded-lg md:hidden hover:bg-white focus:outline-none focus:ring-2 focus:ring-gray-200 "
+                        aria-controls="navbar-default" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-7 h-7" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 17 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+                        </svg>
+                    </button>
+
                 </div>
 
-                <button data-collapse-toggle="navbar-default" type="button" onclick="openMenu()"
-                    class="inline-flex items-center p-1 w-14 h-14  justify-center text-sm text-white hover:text-[#30328C] rounded-lg md:hidden hover:bg-white focus:outline-none focus:ring-2 focus:ring-gray-200 "
-                    aria-controls="navbar-default" aria-expanded="false">
-                    <span class="sr-only">Open main menu</span>
-                    <svg class="w-7 h-7" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 17 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M1 1h15M1 7h15M1 13h15" />
-                    </svg>
-                </button>
-
             </div>
 
-        </div>
+            {{-- end navbar --}}
 
-        {{-- end navbar --}}
+            {{-- SLOGAN --}}
+            <div class="flex flex-col justify-center items-center h-[90%] pt-[193px] text-white ">
+                <div class="font-bold self-center text-center">
+                    <h1 class="lg:text-[40px] md:text-3xl sss:text-xl leading-[130%] tracking-[0.2px] pb-4">
+                        {{ __('index.welcome') }}
+                    </h1>
+                    <h2
+                        class="lg:text-[80px] md:text-[57px] sss:text-3xl tracking-[0.4px] md:leading-[130%] capitalize pb-6">
+                        {{ __('index.text_utama') }}
+                    </h2>
+                    <p class="text-2xl font-normal leading-[140%] tracking-[0.12px] pb-12 lg:mx-5 mx-2 ">
+                        {{ __('index.text_desc') }}</p>
 
-        {{-- SLOGAN --}}
-        <div class="flex flex-col justify-center items-center h-[90%] pt-[193px] text-white ">
-            <div class="font-bold self-center text-center">
-                <h1 class="lg:text-[40px] md:text-3xl sss:text-xl leading-[130%] tracking-[0.2px] pb-4">
-                    {{ __('index.welcome') }}
-                </h1>
-                <h2
-                    class="lg:text-[80px] md:text-[57px] sss:text-3xl tracking-[0.4px] md:leading-[130%] capitalize pb-6">
-                    {{ __('index.text_utama') }}
-                </h2>
-                <p class="text-2xl font-normal leading-[140%] tracking-[0.12px] pb-12 lg:mx-5 mx-2 ">
-                    {{ __('index.text_desc') }}</p>
-
+                </div>
+                <a href="#service"
+                    class="rounded-full  border-white border bg-abu py-[16px] px-[24px] flex justify-center items-center gap-4 w-[340px] backdrop-blur-lg">
+                    <p class="font-semibold trackinng-[0.12px] leading-[140%] text-[24px]">
+                        {{ __('index.selengkapnya') }}
+                    </p>
+                    <img src="{{ asset('img/more.svg') }}" alt="">
+                </a>
             </div>
-            <a href="#service"
-                class="rounded-full  border-white border bg-abu py-[16px] px-[24px] flex justify-center items-center gap-4 w-[340px] backdrop-blur-lg">
-                <p class="font-semibold trackinng-[0.12px] leading-[140%] text-[24px]">{{ __('index.selengkapnya') }}
-                </p>
-                <img src="{{ asset('img/more.svg') }}" alt="">
-            </a>
-        </div>
 
 
         {{-- MITRA KAMI --}}
@@ -302,6 +267,7 @@
                     </div>
                 </div>
             </div>
+        </div>
         </div>
 
     </section>
@@ -515,9 +481,8 @@
                     <img src="{{ asset('img/bg_about.png') }}" class="w-[690px] bg-about">
                 </div>
                 <p
-                class="text-center text-2xl sm:text-3xl md:text-[37.8px] pb-[166px] font-semibold tracking-[0.19px] md:leading-[130%] text-transparent bg-gradient-to-bl bg-clip-text from-[#30328C] to-[#3a3eca]"
-
-                >{{ __('index.aboutText') }}</p>
+                    class="text-center text-2xl sm:text-3xl md:text-[37.8px] pb-[166px] font-semibold tracking-[0.19px] md:leading-[130%] text-transparent bg-gradient-to-bl bg-clip-text from-[#30328C] to-[#3a3eca]">
+                    {{ __('index.aboutText') }}</p>
             </div>
             <p class="text-[32px] font-bold leading-[130%] tracking-[0.16px] text-center pb-12 z-10">
                 {{ __('index.question') }}</p>
@@ -526,35 +491,47 @@
             <div class="flex flex-col gap-8 pb-40 z-10">
 
                 <div class="flex p-8 flex-col items-start self-stretch bg-[#fafafa] rounded-3xl">
-                    <h1 class="text-black font-mont font-bold sm:text-2xl text-xl leading-none pb-6">{{ __('index.q1Title') }}
+                    <h1 class="text-black font-mont font-bold sm:text-2xl text-xl leading-none pb-6">
+                        {{ __('index.q1Title') }}
                     </h1>
-                    <p class="font-mont text-[#727272] sm:text-xl text-lg font-medium leading-none">{{ __('index.q1Desc') }}</p>
+                    <p class="font-mont text-[#727272] sm:text-xl text-lg font-medium leading-none">
+                        {{ __('index.q1Desc') }}</p>
                 </div>
 
                 <div class="flex p-8 flex-col items-start self-stretch bg-[#fafafa] rounded-3xl">
-                    <h1 class="text-black font-mont font-bold sm:text-2xl text-xl leading-none pb-6">{{ __('index.q2Title') }}
+                    <h1 class="text-black font-mont font-bold sm:text-2xl text-xl leading-none pb-6">
+                        {{ __('index.q2Title') }}
                     </h1>
-                    <p class="font-mont text-[#727272] sm:text-xl text-lg font-medium leading-none">{{ __('index.q2Desc') }}</p>
+                    <p class="font-mont text-[#727272] sm:text-xl text-lg font-medium leading-none">
+                        {{ __('index.q2Desc') }}</p>
                 </div>
                 <div class="flex p-8 flex-col items-start self-stretch bg-[#fafafa] rounded-3xl">
-                    <h1 class="text-black font-mont font-bold sm:text-2xl text-xl leading-none pb-6">{{ __('index.q3Title') }}
+                    <h1 class="text-black font-mont font-bold sm:text-2xl text-xl leading-none pb-6">
+                        {{ __('index.q3Title') }}
                     </h1>
-                    <p class="font-mont text-[#727272] sm:text-xl text-lg font-medium leading-none">{{ __('index.q3Desc') }}</p>
+                    <p class="font-mont text-[#727272] sm:text-xl text-lg font-medium leading-none">
+                        {{ __('index.q3Desc') }}</p>
                 </div>
                 <div class="flex p-8 flex-col items-start self-stretch bg-[#fafafa] rounded-3xl">
-                    <h1 class="text-black font-mont font-bold sm:text-2xl text-xl leading-none pb-6">{{ __('index.q4Title') }}
+                    <h1 class="text-black font-mont font-bold sm:text-2xl text-xl leading-none pb-6">
+                        {{ __('index.q4Title') }}
                     </h1>
-                    <p class="font-mont text-[#727272] sm:text-xl text-lg font-medium leading-none">{{ __('index.q4Desc') }}</p>
+                    <p class="font-mont text-[#727272] sm:text-xl text-lg font-medium leading-none">
+                        {{ __('index.q4Desc') }}</p>
                 </div>
                 <div class="flex p-8 flex-col items-start self-stretch bg-[#fafafa] rounded-3xl">
-                    <h1 class="text-black font-mont font-bold sm:text-2xl text-xl leading-none pb-6">{{ __('index.q5Title') }}
+                    <h1 class="text-black font-mont font-bold sm:text-2xl text-xl leading-none pb-6">
+                        {{ __('index.q5Title') }}
                     </h1>
-                    <p class="font-mont text-[#727272] sm:text-xl text-lg font-medium leading-none">{{ __('index.q5Desc') }}</p>
+                    <p class="font-mont text-[#727272] sm:text-xl text-lg font-medium leading-none">
+                        {{ __('index.q5Desc') }}</p>
                 </div>
                 <div class="flex p-8 flex-col items-start self-stretch bg-[#fafafa] rounded-3xl">
-                    <h1 class="text-black font-mont font-bold sm:text-2xl text-xl leading-none pb-6">{{ __('index.q6Title') }}
+                    <h1 class="text-black font-mont font-bold sm:text-2xl text-xl leading-none pb-6">
+                        {{ __('index.q6Title') }}
                     </h1>
-                    <p class="font-mont text-[#727272] sm:text-xl text-lg font-medium leading-none">{{ __('index.q6Desc') }}</p>
+                    <p class="font-mont text-[#727272] sm:text-xl text-lg font-medium leading-none">
+                        {{ __('index.q6Desc') }}</p>
                 </div>
             </div>
 
@@ -567,26 +544,29 @@
     </div>
     {{-- end about --}}
 
-    <div class="bg-hitam w-full relative  z-[16]">
-        <div class="px-32 pt-[300px]">
+    <div class="bg-hitam w-full relative  z-[16] overflow-hidden">
+        <div class="px-3 sm:px-6 lg:px-32 pt-[300px] ">
             <div
                 class="capitalize flex p-14 items-center gap-12 flex-col rounded-[48px] bg-[#ffffff66] text-white overflow-x-hidden relative">
-                <h1 class="text-[40px] font-bold tracking-[0.2px] leading-[130%]">Unlock Your Digital Potential
+                <h1 class="text-3xl md:text-[40px] font-bold tracking-[0.2px] md:leading-[130%] z-10">Unlock Your
+                    Digital Potential
                 </h1>
-                <h1 class=" tracking-[0.2px] leading-[130%] text-[32px]">Empower your brand with software solutions &
+                <h1 class=" tracking-[0.2px] md:leading-[130%] md:text-[32px] text-2xl z-10">Empower your brand with
+                    software solutions &
                     digital marketing excellence</h1>
                 <a href="http://wa.me/+6287802530264"
-                    class="capitalize px-6 py-4 rounded-full flex items-center justify-center bg-transparent bg-gradient-to-tl from-[#30328C] to-[#3A3ECA] text-2xl font-semibold tracking-[0.12px] leading-[140%]">get
+                    class="capitalize px-6 py-4 rounded-full flex items-center justify-center bg-transparent bg-gradient-to-tl from-[#30328C] to-[#3A3ECA] md:text-2xl text-xl font-bold tracking-[0.12px] leading-[140%]">get
                     started now</a>
-                <img src="{{ asset('img/Group 51.png') }}" class="absolute left-0 top-0">
-                <img src="{{ asset('img/Group 52.png') }}" class="absolute right-0 bottom-0">
+                <img src="{{ asset('img/Group 51.png') }}" class="absolute -z-[1] lg:z-[1] left-0 top-0">
+                <img src="{{ asset('img/Group 52.png') }}" class="absolute -z-[1] lg:z-[1] right-0 bottom-0">
 
             </div>
         </div>
 
-        <div class="mt-[84px] px-[104px] py-[56px] flex flex-col items-start gap-12 text-white">
-            <div class="flex justify-between items-center self-stretch">
-                <img src="{{ asset('img/dri.png') }}" class="w-[72px]">
+        <div
+            class="mt-[84px] sm:px-[104px] sss:px-4 sm:py-[56px] sss:py-8 flex flex-col items-start sm:gap-12 sss:gap-4 text-white">
+            <div class="flex sm:justify-between flex-col sm:flex-row items-center self-stretch">
+                <img src="{{ asset('img/dri.png') }}" class="sm:w-[72px] sss:w-14">
                 <div class="flex justify-end items-center lg:gap-28 sss:gap-3">
                     <a href="#home" class="text-xl font-semibold leading-[140%] tracking-tight">Home</a>
                     <a href="#about" class="text-xl font-semibold leading-[140%] tracking-tight">About</a>
@@ -596,23 +576,27 @@
                 </div>
             </div>
 
-            <div class="flex items-start gap-12">
+            <div class="flex items-start sm:gap-12 gap-7">
                 <a href="https://www.linkedin.com/company/pt-daya-rekadigital-indonesia">
-                    <img src="{{ asset('img/ig.png') }}" class="w-12">
+                    <img src="{{ asset('img/ig.png') }}" class="sm:w-12 w-6">
                 </a>
                 <a href="https://www.instagram.com/rekadigi.id/">
-                    <img src="{{ asset('img/lind.png') }}" class="w-12">
+                    <img src="{{ asset('img/lind.png') }}" class="sm:w-12 w-6">
                 </a>
             </div>
 
-            <p class="text-2xl leading-[140%] tracking-tight font-semibold">Crafting Your Digital Future</p>
-            <p class="font-mont text-xl leading-none">© 2023 PT Daya Rekadigital Indonesia All rights reserved.</p>
+            <p class="sm:text-2xl text-lg sm:leading-[140%] tracking-tight font-semibold">Crafting Your Digital Future
+            </p>
+            <p class="font-mont sm:text-xl text-lg leading-none">© 2023 PT Daya Rekadigital Indonesia All rights
+                reserved.</p>
         </div>
 
         {{-- lamp top left --}}
-        <div class="absolute top-6 -left-30  bg-blue-900 lamp2 -z-[1] w-[500px] h-[500px]"></div>
-        {{-- lamp top left --}}
-        <div class="absolute top-64 right-0  bg-blue-900 lamp2 -z-[1] w-[500px] h-[500px]"></div>
+        <div class="absolute top-6 -left-30  bg-blue-900 lamp2 -z-[1] sm:w-[500px] w-80 h-80 sm:h-[500px]"></div>
+        {{-- lamp top right --}}
+        <div
+            class="absolute sm:top-64 sss:top-[460px] right-0 lamp2 bg-blue-900  -z-[1] sm:w-[500px] w-80 h-80 sm:h-[500px]">
+        </div>
     </div>
 
 
