@@ -14,11 +14,12 @@
     background-image: url('../../public/img/BG.svg');
     background-repeat: no-repeat;
 }
-.backx256 {
-    background-image: url('../../public/img/bgx2560.svg');
-    background-repeat: no-repeat;
+@media (min-width: 1920px) {
+    .back {
+        background-image: url('../../public/img/bgx2560.svg');
+        background-repeat: no-repeat;
+    }
 }
-
 .img-pkr {
     background-image: url('../../public/img/mitra/pkr.png');
 }
@@ -63,4 +64,7 @@
 }
 .cc{
     border: solid chartreuse !important
+}
+.visimisi{
+    backdrop-filter: blur(90px);
 }
